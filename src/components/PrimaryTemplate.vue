@@ -13,6 +13,14 @@ import Footer from "./Footer.vue";
 </template>
 
 <style scoped>
+a {
+  &.router-link-active {
 
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 </style>

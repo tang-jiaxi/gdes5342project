@@ -27,7 +27,6 @@ defineProps({
 </script>
 
 <template>
-  <component>
     <div v-if="tagName=='UX'">
       <div class="container">
         <div class="circle" style="background-color:#DD5868"></div>
@@ -50,8 +49,6 @@ defineProps({
         <p>Work</p>
       </div>
     </div>
-  </component>
-
 </template>
 
 <style scoped>
