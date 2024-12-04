@@ -7,7 +7,7 @@ import router from "../router.js";
 <template>
   <div class="nav">
     <button @click="router.push({ name: 'Home' })" class="logo">
-      <img src="../assets/logo.png" alt="logo" width="40"/>
+      <img src="../assets/logo.png" alt="logo"/>
       <div class="logoName">Jiaxi Tang</div>
     </button>
 
@@ -31,7 +31,7 @@ import router from "../router.js";
   flex-direction: column;
   gap: 0.5rem;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-block: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -41,6 +41,10 @@ import router from "../router.js";
     justify-content: space-between;
     margin: 1rem;
   }
+}
+
+img {
+  width: 4rem;
 }
 
 .logo{

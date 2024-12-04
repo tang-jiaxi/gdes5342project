@@ -1,5 +1,5 @@
 <script setup>
-import PrimaryTemplate from "./components/PrimaryTemplate.vue";
+import PrimaryTemplate from "./templates/PrimaryTemplate.vue";
 </script>
 
 <template>
@@ -10,12 +10,3 @@ import PrimaryTemplate from "./components/PrimaryTemplate.vue";
 
 <style scoped>
 </style>
-<!--body {-->
-<!--  margin-inline: 0.5rem;-->
-<!--}-->
-
-<!--@media (min-width: 768px) {-->
-<!--  body {-->
-<!--    margin-inline: 2rem;-->
-<!--  }-->
-<!--}-->

@@ -4,7 +4,11 @@ import { useRouter } from "vue-router";
 const props = defineProps( {
   index: {
     type: Number,
-    required: true
+    required: false
+  },
+  pageName: {
+    type: String,
+    required: false
   }
 } );
 const links = ["GovTech", "SASE"];
@@ -19,7 +23,7 @@ const router = useRouter();
       ← Prev
     </button>
 
-    <h4>Thanks for watching!</h4>
+    <h3>Thanks for watching!</h3>
 
     <button @click="router.push({ name: nextLink })">
       Next →
@@ -34,24 +38,28 @@ const router = useRouter();
   justify-content: space-between;
   border: 1px solid black;
   border-radius: 20px;
-  width: 95%;
+  width: 90vw;
   margin: 0 auto;
+  align-items: center;
 }
 
 button {
   border: unset;
   background-color: unset;
   margin: 1rem;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 1.1rem;
 }
 
-h4 {
+h3 {
   text-align: center;
+  color: black;
+  font-weight: bold;
 }
 
 @media (min-width: 768px) {
   .container {
-    min-width: fit-content;
-    width: 50%;
+    width: clamp(40vw, 50vw, 368px);
   }
 }
 </style>

@@ -1,17 +1,8 @@
 <script setup>
-import resumePDF from "../assets/Resume.pdf"
-import { VuePDF, usePDF } from '@tato30/vue-pdf'
-import '@tato30/vue-pdf/style.css'
-
-const { pdf } = usePDF('../src/assets/Resume.pdf')
 </script>
 
 <template>
-  <img src="../assets/Resume.png" alt="Jiaxi Tang Resume"/>
-<!--  <iframe :src="resumePDF"></iframe>-->
-<!--  <div class="container">-->
-<!--    <VuePDF :pdf="pdf" text-annotation style="width: 95vw"></VuePDF>-->
-<!--  </div>-->
+  <img src="../assets/Resume.jpg" alt="Jiaxi Tang Resume"/>
 </template>
 
 <style scoped>

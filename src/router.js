@@ -24,7 +24,11 @@ const routes = [
     path: '/resume',
     name: 'Resume',
     component: Resume
-  },
+  }
+  // {
+  //   path: '/:pathMatch(.*)*',
+  //   name: 'Invalid',
+  // }
 ]
 
 const router = createRouter({

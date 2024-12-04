@@ -10,6 +10,10 @@ defineProps( {
     type: String,
     required: true
   },
+  imageAlt: {
+    type: String,
+    required: true
+  },
   title: {
     type: String,
     required: true
@@ -34,10 +38,10 @@ defineProps( {
   <div class="container">
     <picture>
       <source :srcset="imagePC" media="(min-width: 768px)"/>
-      <img :src="imageMobile" alt="Case study cover page" width="100%"/>
+      <img :src="imageMobile" :alt="imageAlt" width="100%"/>
     </picture>
     <div class="content">
-      <h2>{{title}}</h2>
+      <h1>{{title}}</h1>
       <div class="tags">
         <div v-for="(tag, index) in tags" :key="index">
           <Tag :tagName="tag"></Tag>
@@ -45,7 +49,7 @@ defineProps( {
       </div>
       <div class="hashtags">
         <div v-for="(hashtag, index) in hashtags" :key="index">
-          {{hashtag}}
+          {{ hashtag }}
         </div>
       </div>
     </div>
@@ -70,7 +74,12 @@ defineProps( {
   flex-direction: column;
   overflow: hidden;
   background-color: white;
-  margin-inline: 1rem;
+  margin: 0 auto;
+  width: 90vw;
+}
+
+picture {
+  border-bottom: black 1.5px solid;
 }
 
 .content {
@@ -79,10 +88,10 @@ defineProps( {
   flex-direction: column;
   gap: 0.5rem;
 
-  h2 {
+  h1 {
      margin: unset;
      font-size: 6vw;
-   }
+  }
 
   .hashtags {
     display: flex;
@@ -97,17 +106,16 @@ defineProps( {
     flex-wrap: wrap;
     gap: 0.75rem;
   }
-
-  @media (min-width: 768px) {
-    .container {
-      width: 75vw;
-    }
-
-    h2 {
-      margin: unset;
-      font-size: 4vw;
-    }
-  }
 }
 
+@media (min-width: 768px) {
+  .container {
+    width: 75vw;
+  }
+
+  .content h1 {
+    margin: unset;
+    font-size: 3vw;
+  }
+}
 </style>

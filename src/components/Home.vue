@@ -1,6 +1,17 @@
 <script setup>
 import {ProjectsArray} from "../assets/ProjectsArray.js";
 import Card from "../components/Card.vue";
+import {onMounted} from "vue";
+import { useRouter, useRoute } from "vue-router";
+
+const route = useRoute();
+const router = useRouter();
+const projectLink = ProjectsArray.find(project => project.link === route.name);
+onMounted(() => {
+  if (!projectLink) {
+    router.push({name: 'Home'})
+  }
+})
 </script>
 
 <template>
@@ -27,6 +38,7 @@ import Card from "../components/Card.vue";
         <Card
           :imagePC="project.imagePC"
           :imageMobile="project.imageMobile"
+          :imageAlt="project.imageAlt"
           :title="project.title"
           :tags="project.tags"
           :hashtags="project.hashtags"
@@ -37,8 +49,8 @@ import Card from "../components/Card.vue";
     </div>
 
     <div class="endMessage">
-      <h3 style="font-weight: bold" >That's all!</h3>
-      <h3 style="font-weight: normal">You've reached the end :)</h3>
+      <h2 style="font-weight: bold" >That's all!</h2>
+      <h2 style="font-weight: normal">You've reached the end :)</h2>
     </div>
 
   </div>
@@ -81,15 +93,16 @@ import Card from "../components/Card.vue";
   margin: unset;
   padding-top: 5rem;
 
-  h3 {
+  h2 {
     margin: unset;
+    color: black;
   }
 }
 
 @media (min-width: 768px) {
   .welcomeMessage {
     margin-inline: 5rem;
-    margin-top: 16vh;
+    margin-top: clamp(8vh, 10vh, 16vh);
     position: absolute;
 
     h1 {
@@ -109,6 +122,10 @@ import Card from "../components/Card.vue";
       text-decoration-color: #DD5868;
       text-underline-offset: 0.55vw;
     }
+  }
+
+  .cards {
+    gap: 3rem;
   }
 }
 </style>

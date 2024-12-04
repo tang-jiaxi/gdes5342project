@@ -1,13 +1,17 @@
 <script setup>
-import router from "../router.js";
+import { useRoute } from 'vue-router'
+
+const route = useRoute();
+
 function openLink(url) {
   window.open(url, '_blank');
 }
+
 </script>
 
 <template>
-  <div class="container">
-    <div class="FooterImage" v-if="$route.name === 'Home'">
+  <div :class="{homeContainer: route.name === 'Home'}" class="container">
+    <div class="FooterImage" v-if="route.name === 'Home'">
       <picture>
         <source srcset="../assets/BottomWaves.png" media="(min-width: 768px)" />
         <img src="../assets/BottomWavesMobile.png" alt="logo" width="100%"/>
@@ -68,6 +72,11 @@ function openLink(url) {
   margin-bottom: 2rem;
 }
 
+.homeContainer {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
 .linkContainer {
   display: flex;
   flex-direction: column;
@@ -80,6 +89,10 @@ function openLink(url) {
   flex-direction: row;
   gap: 3.5rem;
   align-items: center;
+
+  img {
+    width: 20vw;
+  }
 }
 
 .logo{
@@ -124,6 +137,12 @@ button:hover {
     margin: 1rem 0;
   }
 
+  .homeContainer {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-inline: 0;
+  }
+
   .linkContainer {
     display: flex;
     flex-direction: row;
@@ -133,6 +152,9 @@ button:hover {
 
   .nav {
     display: contents;
+    img {
+      width: 4rem;
+    }
   }
 
   .logo{

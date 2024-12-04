@@ -59,7 +59,7 @@ defineProps({
   gap: 0.2rem;
   border: 1px black solid;
   border-radius: 5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.05rem 0.75rem;
 }
 
 .circle {
@@ -69,7 +69,6 @@ defineProps({
 }
 
 p {
-  margin: unset;
-  white-space: nowrap;
+  font-size: 1rem;
 }
 </style>
