@@ -24,13 +24,19 @@ const router = useRouter();
 <template>
   <div class="container">
     <button @click="router.push({ name: prevLink })">
-      ← Prev
+      <div class="prev">
+        <span class="arrow">←</span>
+        <span>Prev</span>
+      </div>
     </button>
 
     <h3>Thanks for watching!</h3>
 
     <button @click="router.push({ name: nextLink })">
-      Next →
+      <div class="next">
+        <span>Next</span>
+        <span class="arrow">→</span>
+      </div>
     </button>
   </div>
 </template>
@@ -53,6 +59,32 @@ button {
   margin: 1rem;
   font-family: 'Zen Kaku Gothic New', sans-serif;
   font-size: 1.1rem;
+  display: flex;
+  flex-direction: row;
+
+  span {
+    align-self: center;
+  }
+
+  .prev {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media (min-width: 380px) {
+      flex-direction: row;
+      gap: 0.25rem;
+    }
+  }
+
+  .next {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 379px) {
+      flex-direction: row;
+      gap: 0.25rem;
+    }
+  }
 }
 
 h3 {
