@@ -20,7 +20,7 @@ function openLink(url) {
     </div>
     <div v-else>
       <picture>
-        <source srcset="../assets/bottomLogoWavePC.png" media="(min-width: 768px)" />
+        <source srcset="../assets/BottomLogoWavePC.png" media="(min-width: 768px)" />
         <img src="../assets/BottomLogoWaveMobile.png" alt="logo" width="100%"/>
       </picture>
     </div>
