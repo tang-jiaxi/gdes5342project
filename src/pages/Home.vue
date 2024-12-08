@@ -1,17 +1,6 @@
 <script setup>
 import {ProjectsArray} from "../assets/ProjectsArray.js";
 import Card from "../components/Card.vue";
-import {onMounted} from "vue";
-import { useRouter, useRoute } from "vue-router";
-
-const route = useRoute();
-const router = useRouter();
-const projectLink = ProjectsArray.find(project => project.link === route.name);
-onMounted(() => {
-  if (!projectLink) {
-    router.push({name: 'Home'})
-  }
-})
 </script>
 
 <template>
@@ -36,6 +25,7 @@ onMounted(() => {
     <div class="cards">
       <div v-for="(project, index) in ProjectsArray" :key="index">
         <Card
+          :name="project.name"
           :imagePC="project.imagePC"
           :imageMobile="project.imageMobile"
           :imageAlt="project.imageAlt"

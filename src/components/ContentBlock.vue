@@ -45,6 +45,10 @@ section.content-block {
   margin: 1rem;
   align-items: flex-start;
 
+  .content {
+    width: 100%;
+  }
+
   .image {
     align-content: center;
 

@@ -1,5 +1,5 @@
 <script setup>
-import ImageCaption from "../ImageCaption.vue";
+import ImageCaption from "../../components/ImageCaption.vue";
 import firstPull from "../../assets/govtech_firstPull.svg"
 import finalPull from "../../assets/govtech_finalPull.svg"
 </script>

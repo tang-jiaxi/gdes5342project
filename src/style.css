@@ -54,3 +54,11 @@ li {
   font-size: 1.5rem;
   margin: unset;
 }
+
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}

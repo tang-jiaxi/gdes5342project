@@ -2,6 +2,10 @@
 import Tag from '../components/Tag.vue'
 
 defineProps( {
+  name: {
+    type: String,
+    required: true
+  },
   imagePC: {
     type: String,
     required: true
@@ -34,7 +38,7 @@ defineProps( {
 </script>
 
 <template>
-  <router-link :to="{ name: link }" class="link">
+  <router-link :to="{ name: name }" class="link">
   <div class="container">
     <picture>
       <source :srcset="imagePC" media="(min-width: 768px)"/>
@@ -61,10 +65,6 @@ defineProps( {
 
 .link {
   text-decoration: unset;
-}
-
-.link:visited {
-  color: inherit;
 }
 
 .container {

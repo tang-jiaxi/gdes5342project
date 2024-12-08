@@ -1,5 +1,6 @@
 <script setup>
 import { useRouter } from "vue-router";
+import {ProjectsArray} from "../assets/ProjectsArray.js";
 
 const props = defineProps( {
   index: {
@@ -11,7 +12,10 @@ const props = defineProps( {
     required: false
   }
 } );
-const links = ["GovTech", "SASE"];
+const links = ProjectsArray
+    .sort((a, b) => a.index - b.index)
+    .map (project => project.name)
+    .flat();
 const prevLink = props.index > 0 ? links[props.index - 1] : links[links.length - 1];
 const nextLink = props.index < links.length - 1 ? links[props.index + 1] : links[0];
 const router = useRouter();

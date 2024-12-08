@@ -1,5 +1,5 @@
 <script setup>
-import GovTech from "./GovTech.vue";
+import GovTech from "../pages/GovTech.vue";
 import router from "../router.js";
 
 </script>
@@ -17,6 +17,15 @@ import router from "../router.js";
       </button>
       <button @click="router.push({ name: 'SASE' })">
         SASE
+      </button>
+      <button @click="router.push({ name: 'RadioK' })">
+        RadioK
+      </button>
+      <button @click="router.push({ name: 'Portfolio' })">
+        Portfolio
+      </button>
+      <button @click="router.push({ name: 'WTL' })">
+        WTL
       </button>
       <button @click="router.push({ name: 'Resume' })">
         Resume

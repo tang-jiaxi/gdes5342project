@@ -1,15 +1,29 @@
 <script setup>
-import ContentParser from "../components/ContentParser.vue";
+import { useRoute } from 'vue-router'
+import {ProjectsArray} from "../assets/ProjectsArray.js";
+import CaseStudyNav from "../components/CaseStudyNav.vue";
+
+const route = useRoute();
+const projectData = ProjectsArray.find((project) => project.name === route.name) || {
+  imagePC: '',
+  imageMobile: '',
+  imageAlt: 'No image found',
+  index: 0,
+};
+
 </script>
 
 <template>
-  <slot name="coverPicture"></slot>
+  <picture>
+    <source :srcset="projectData.imagePC" media="(min-width: 768px)"/>
+    <img :src="projectData.imageMobile" :alt="projectData.imageAlt" width="100%"/>
+  </picture>
 
   <body>
-    <slot name="body"></slot>
+    <slot></slot>
   </body>
 
-  <slot name="bottomNav"></slot>
+  <CaseStudyNav :index="projectData.index"></CaseStudyNav>
 </template>
 
 <style scoped>

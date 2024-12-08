@@ -1,5 +1,5 @@
 <script setup>
-import ImageCaption from "../ImageCaption.vue";
+import ImageCaption from "../../components/ImageCaption.vue";
 import govtechHackathon from "../../assets/govtech_hackathon.svg";
 
 </script>

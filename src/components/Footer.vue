@@ -1,5 +1,6 @@
 <script setup>
 import { useRoute } from 'vue-router'
+import router from "../router.js";
 
 const route = useRoute();
 
@@ -33,14 +34,20 @@ function openLink(url) {
         </button>
 
         <div class="links">
-          <button @click="router.push({ name: 'Home' })">
-            Home
-          </button>
           <button @click="router.push({ name: 'GovTech' })">
             GovTech
           </button>
           <button @click="router.push({ name: 'SASE' })">
             SASE
+          </button>
+          <button @click="router.push({ name: 'RadioK' })">
+            RadioK
+          </button>
+          <button @click="router.push({ name: 'Portfolio' })">
+            Portfolio
+          </button>
+          <button @click="router.push({ name: 'WTL' })">
+            WTL
           </button>
           <button @click="router.push({ name: 'Resume' })">
             Resume
@@ -109,9 +116,11 @@ function openLink(url) {
 }
 
 .links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  row-gap: 0.5rem;
+  margin: 0 auto;
 }
 
 button {

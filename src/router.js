@@ -1,8 +1,11 @@
 import {createRouter, createWebHistory} from "vue-router";
-import Home from "./components/Home.vue";
-import GovTech from "./components/GovTech.vue";
-import SASE from "./components/Sase.vue";
-import Resume from "./components/resume.vue";
+import Home from "./pages/Home.vue";
+import GovTech from "./pages/GovTech.vue";
+import SASE from "./pages/Sase.vue";
+import Portfolio from "./pages/Portfolio.vue";
+import RadioK from "./pages/RadioK.vue";
+import WTL from "./pages/Wtl.vue";
+import Resume from "./pages/Resume.vue";
 
 const routes = [
   {
@@ -19,6 +22,21 @@ const routes = [
     path: '/sase',
     name: 'SASE',
     component: SASE
+  },
+  {
+    path: '/portfolio',
+    name: 'Portfolio',
+    component: Portfolio
+  },
+  {
+    path: '/radioK',
+    name: 'RadioK',
+    component: RadioK
+  },
+  {
+    path: '/wtl',
+    name: 'WTL',
+    component: WTL
   },
   {
     path: '/resume',
