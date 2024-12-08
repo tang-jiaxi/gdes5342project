@@ -1,23 +1,11 @@
 <script setup>
-import govtechMatrix from "../../assets/govtech_matrix.svg";
+import govtechIterative from "./govtech_iterative.svg";
+import ImageCaption from "../../components/ImageCaption.vue";
 </script>
 
 <template>
-  <div class="container">
-    <img :src="govtechMatrix">
-    <h3>Decision making matrix</h3>
-  </div>
+  <ImageCaption caption="Decision making matrix" :image="govtechIterative"/>
 </template>
 
 <style scoped>
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-h3 {
-  text-align: center;
-}
-
 </style>

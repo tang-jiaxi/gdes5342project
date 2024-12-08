@@ -71,7 +71,11 @@ img {
 .links {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  row-gap: 0.2rem;
+  margin-inline: 0.5rem;
 }
 
 .links button {

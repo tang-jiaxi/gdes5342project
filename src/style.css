@@ -14,9 +14,12 @@ img {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: unset;
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
 }
 
 h2 {
@@ -24,41 +27,83 @@ h2 {
   font-weight: bold;
   color: #C1BEBE;
   margin: unset;
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
 }
 
 h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #C3BBBB;
   font-weight: normal;
   margin: unset;
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #C3BBBB;
   margin: unset;
+  font-weight: normal;
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
 }
 
 p {
-  font-size: 1.5rem;
-  margin-block: 0.75rem;
+  font-size: 1.25rem;
+  margin-block: 0.5rem;
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+    margin-block: 0.75rem;
+  }
 }
 
 ul {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: unset;
-  padding: 1.5rem;
+  padding-block: 0.5rem;
+  padding-left: 1.25rem;
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+  }
+}
+
+ol {
+  font-size: 1.25rem;
+  margin: unset;
+  padding-block: 0.5rem;
+  padding-left: 1.25rem;
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+  }
 }
 
 li {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: unset;
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
 }
 
 a {
   color: black;
+
+  &:visited {
+    color: black;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
 }
 
-a:visited {
-  color: black;
-}

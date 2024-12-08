@@ -1,43 +1,28 @@
 <script setup>
 import CaseStudyTemplate from "../templates/CaseStudyTemplate.vue";
-import CaseStudyNav from "../components/CaseStudyNav.vue";
 import ContentBlock from "../components/ContentBlock.vue";
 
-import Problem from "../content/saseContent/Problem.vue"
-import DesignRequirements from "../content/saseContent/DesignRequirements.vue";
-import Requirement1 from "../content/saseContent/Requirement1.vue";
-import Requirement2 from "../content/saseContent/Requirement2.vue";
-import TechStack from "../content/saseContent/TechStack.vue";
-import ToggleResume from "../content/saseContent/ToggleResume.vue";
-import MovingForward from "../content/saseContent/MovingForward.vue";
+import Problem from "../content/saseContent/1_Problem.vue"
+import DesignRequirements from "../content/saseContent/2_DesignRequirements.vue";
+import Requirement1 from "../content/saseContent/3_Requirement1.vue";
+import Requirement2 from "../content/saseContent/3_Requirement2.vue";
+import TechStack from "../content/saseContent/4_TechStack.vue";
+import ToggleResume from "../content/saseContent/5_ToggleResume.vue";
+import MovingForward from "../content/saseContent/7_MovingForward.vue";
 
-import TechStackImage from "../assets/techstack.svg";
-import SaseWebsiteTogglePDF from "../assets/sase_togglePDF.svg";
-import SaseBoard from "../assets/sase_board.svg";
+import TechStackImage from "../content/saseContent/4_sase_techstack.svg";
+import SaseWebsiteTogglePDF from "../content/saseContent/6_sase_togglePDF.svg";
+import SaseBoard from "../content/saseContent/7_sase_board.svg";
 </script>
 
 <template>
   <CaseStudyTemplate>
-    <template #coverPicture>
-      <picture>
-        <source srcset="../assets/saseCover.png" media="(min-width: 768px)"/>
-        <img src="../assets/saseCoverMobile.svg" alt="Case study cover page" width="100%"/>
-      </picture>
-    </template>
-
-    <template #body>
-      <ContentBlock :content-component1="Problem"/>
-      <ContentBlock :content-component1="DesignRequirements"/>
-      <ContentBlock :content-component1="Requirement1" :content-component2="Requirement2"/>
-      <ContentBlock :content-component1="TechStack" :image="TechStackImage"/>
-      <ContentBlock :content-component1="ToggleResume"/>
-      <img :src="SaseWebsiteTogglePDF"/>
-      <ContentBlock :content-component1="MovingForward" :image="SaseBoard"/>
-    </template>
-
-    <template #bottomNav>
-      <CaseStudyNav :index="1"></CaseStudyNav>
-    </template>
+    <ContentBlock :content-component1="Problem"/>
+    <ContentBlock :content-component1="DesignRequirements"/>
+    <ContentBlock :content-component1="Requirement1" :content-component2="Requirement2" align="flex-start"/>
+    <ContentBlock :content-component1="TechStack" :image="TechStackImage"/>
+    <ContentBlock :content-component1="ToggleResume" :full-image="SaseWebsiteTogglePDF"/>
+    <ContentBlock :content-component1="MovingForward" :image="SaseBoard"/>
   </CaseStudyTemplate>
 </template>
 

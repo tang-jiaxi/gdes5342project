@@ -41,7 +41,7 @@ export const ProjectsArray = [
     tags: ['UX', 'CS', 'School'],
     hashtags: ['#Figma', '#React', '#Next.js', 'Tailwind', 'TypeScript'],
     link: 'portfolio',
-    index: 3,
+    index: 2,
   },
   {
     name: "RadioK",
@@ -51,8 +51,8 @@ export const ProjectsArray = [
     title: 'Podcast Website Redesign',
     tags: ['UX', 'Client'],
     hashtags: ['#Figma', '#UserPersona', '#UserJourney'],
-    link: 'radiok',
-    index: 4,
+    link: 'radioK',
+    index: 3,
   },
   {
     name: "WTL",
@@ -63,6 +63,6 @@ export const ProjectsArray = [
     tags: ['UX', 'Work'],
     hashtags: ['#Figma', '#Illustrator', '#Research'],
     link: 'wtl',
-    index: 5,
+    index: 4,
   }
 ];

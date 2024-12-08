@@ -9,41 +9,68 @@ defineProps({
   contentComponent2: {
     required: false
   },
-  layoutStyle: {
+  layout: {
     type: String,
     required: false,
     default: 'text-left'
+  },
+  align: {
+    type: String,
+    required: false,
+    default: 'center',
+  },
+  fullImage: {
+    required: false,
+  },
+  fullComponent: {
+    required: false,
   }
 })
 </script>
 
 <template>
-  <section class="content-block style" :class="layoutStyle">
-    <div class="content">
-      <component :is="contentComponent1"/>
-    </div>
-
-    <template v-if="image || contentComponent2">
-      <div v-if="image" class="image">
-        <img :src="image" alt="Case Study Image"/>
+  <div class="container">
+    <section class="content-block style" :class="layout" :style="{ alignItems: align }">
+      <div class="content">
+        <component :is="contentComponent1"/>
       </div>
-      <div v-else-if="contentComponent2" class="content">
-        <component :is="contentComponent2"/>
-      </div>
-    </template>
 
-  </section>
+      <template v-if="image || contentComponent2">
+        <div v-if="image" class="image">
+          <img :src="image" alt="Case Study Image"/>
+        </div>
+        <div v-else-if="contentComponent2" class="content">
+          <component :is="contentComponent2"/>
+        </div>
+      </template>
+    </section>
+
+    <section v-if="fullImage || fullComponent" class="full-width">
+      <div class="fullWidthImage" v-if="fullImage">
+        <img :src="fullImage" alt="Case Study Image"/>
+      </div>
+      <div class="fullWidthImage" v-else-if="fullComponent">
+        <component :is="fullComponent"/>
+      </div>
+    </section>
+  </div>
 </template>
 
 <style scoped>
-/* Mobile first */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  @media (min-width: 768px) {
+    gap: 1rem;
+  }
+}
+
 section.content-block {
   display: flex;
   gap: 2rem;
   flex-direction: column;
   text-align: left;
-  margin: 1rem;
-  align-items: flex-start;
 
   .content {
     width: 100%;
@@ -59,7 +86,6 @@ section.content-block {
 
   @media (min-width: 768px) {
     justify-content: space-between;
-    margin-inline: 8vw;
     gap: 4rem;
 
     &.style {

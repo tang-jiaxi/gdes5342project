@@ -1,23 +1,12 @@
 <script setup>
-import govtechIterative from "../../assets/govtech_iterative.svg";
+import govtechIterative from "./govtech_iterative.svg";
+import ImageCaption from "../../components/ImageCaption.vue";
 </script>
 
 <template>
-  <div class="container">
-    <img :src="govtechIterative">
-    <h3>Iterative Design Process</h3>
-  </div>
+  <ImageCaption caption="Iterative design process" :image="govtechIterative"/>
 </template>
 
 <style scoped>
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-h3 {
-  text-align: center;
-}
 
 </style>

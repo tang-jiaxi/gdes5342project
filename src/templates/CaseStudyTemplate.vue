@@ -23,20 +23,28 @@ const projectData = ProjectsArray.find((project) => project.name === route.name)
     <slot></slot>
   </body>
 
-  <CaseStudyNav :index="projectData.index"></CaseStudyNav>
+  <div class="caseStudyNav">
+    <CaseStudyNav :index="projectData.index"></CaseStudyNav>
+  </div>
 </template>
 
 <style scoped>
 body {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-inline: 4vw;
+  gap: 3rem;
+  margin-inline: 8vw;
+  margin-block: 2rem;
 
   @media (min-width: 768px) {
     margin-block: 6rem;
-    margin-inline: 4vw;
+    margin-inline: 12vw;
     gap: 6rem;
   }
+}
+
+.caseStudyNav {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 </style>
