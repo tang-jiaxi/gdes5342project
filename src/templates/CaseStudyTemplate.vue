@@ -16,7 +16,7 @@ const projectData = ProjectsArray.find((project) => project.name === route.name)
 <template>
   <picture>
     <source :srcset="projectData.imagePC" media="(min-width: 768px)"/>
-    <img :src="projectData.imageMobile" :alt="projectData.imageAlt" width="100%"/>
+    <img :src="projectData.imageMobile" :alt="projectData.imageAlt" style="width: 100%"/>
   </picture>
 
   <body>

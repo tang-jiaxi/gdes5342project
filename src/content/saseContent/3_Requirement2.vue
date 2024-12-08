@@ -15,6 +15,5 @@
 <style scoped>
 ul {
   list-style-type: '✅';
-  margin-top: 2rem;
 }
 </style>

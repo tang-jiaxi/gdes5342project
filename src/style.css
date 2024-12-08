@@ -66,9 +66,10 @@ ul {
   margin: unset;
   padding-block: 0.5rem;
   padding-left: 1.25rem;
+
   @media (min-width: 768px) {
     font-size: 1.5rem;
-    padding: 1.5rem;
+    padding-left: 1.5rem;
   }
 }
 
@@ -79,7 +80,7 @@ ol {
   padding-left: 1.25rem;
   @media (min-width: 768px) {
     font-size: 1.5rem;
-    padding: 1.5rem;
+    padding-left: 1.5rem;
   }
 }
 

@@ -48,12 +48,12 @@ import router from "../router.js";
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 1rem;
+    margin: 0.5rem 1rem;
   }
 }
 
 img {
-  width: 4rem;
+  width: 3.5rem;
 }
 
 .logo{
@@ -73,7 +73,7 @@ img {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.75rem;
+  gap: clamp(0.75rem, 1rem, 2rem);
   row-gap: 0.2rem;
   margin-inline: 0.5rem;
 }
