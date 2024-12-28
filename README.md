@@ -1,7 +1,7 @@
 # Simplified Personal Portfolio Website in Vue.js
 
 ## About
-This is a simplified version of my portfolio website created using Vue.js. This website highlights my work across three key areas: UI/UX Design, Computer Science, and Graphic Design.
+This is a simplified version of my portfolio website created using Vue.js as practice for my web development class. This website highlights my work across three key areas: UI/UX Design, Computer Science, and Graphic Design.
 
 ## Viewing the website
 View the Vue implementation [here](https://gdes5342project.vercel.app/).
