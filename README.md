@@ -1,5 +1,13 @@
-# Vue 3 + Vite
+# Simplified Personal Portfolio Website in Vue.js
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## About
+This is a simplified version of my portfolio website created using Vue.js. This website highlights my work across three key areas: UI/UX Design, Computer Science, and Graphic Design.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Viewing the website
+View the Vue implementation [here](https://gdes5342project.vercel.app/).
+Visit my actual portfolio website [here](https://www.jiaxitang.com/).
+
+## Built with
+* Vue.js
+* HTML
+* CSS
